@@ -11,7 +11,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Monitoring
+                        <h1 class="page-title"> Monitoring Ketinggian
                             <small>Sensor Ultrasonic</small>
                         </h1>
                         <div class="container-fluid">
