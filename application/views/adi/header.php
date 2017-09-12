@@ -77,7 +77,7 @@
                                 <ul class="sub-menu">
                                     <li class="nav-item start">
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/index/" class="nav-link ">
-                                            <i class="icon-bar-chart"></i>
+                                            <i class="icon-clone"></i>
                                             <span class="title">Monitoring Sensor</span>
                                         </a>
                                     </li>
@@ -85,6 +85,21 @@
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/system_log/" class="nav-link ">
                                             <i class="icon-graph"></i>
                                             <span class="title">Today System Log</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="nav-item start">
+                                <a href="#" class="nav-link nav-toggle">
+                                    <i class="icon-home"></i>
+                                    <span class="title">Laporan</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item start">
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/system_laporan/" class="nav-link ">
+                                            <i class="icon-bar-chart"></i>
+                                            <span class="title">Cek Laporan Periode</span>
                                         </a>
                                     </li>
                                 </ul>

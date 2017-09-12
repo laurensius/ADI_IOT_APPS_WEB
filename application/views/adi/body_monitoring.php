@@ -7,12 +7,12 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>Sensor</span>
+                                    <span>Sensor Ultrasonik</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Monitoring Ketinggian Darrma hehehehehe
-                            <small>Sensor Ultrasonic</small>
+                        <h1 class="page-title"> Monitoring Ketinggian Air 
+                            <small>Bendungan Waduk Darma</small>
                         </h1>
                         <div class="container-fluid">
                             <div class="row">

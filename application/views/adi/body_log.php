@@ -35,7 +35,7 @@
                                 </tbody>
                             </table>
 							</div>
-							<button class="btn btn-success" onclick="printContent('p1')"><i class="fa  fa-print">   Print</i></button>
+							<button class="btn btn-success" onclick="printContent('p1')"><i class="fa  fa-print">Print</i></button>
                         </div>
                     </div>
                 </div>
