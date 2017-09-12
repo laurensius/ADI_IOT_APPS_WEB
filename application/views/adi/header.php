@@ -76,13 +76,13 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item start">
-                                        <a href="<?php echo site_url(); ?>/adi/monitoringketinggian/index/" class="nav-link ">
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/index/" class="nav-link ">
                                             <i class="icon-bar-chart"></i>
                                             <span class="title">Monitoring Sensor</span>
                                         </a>
                                     </li>
                                     <li class="nav-item start ">
-                                        <a href="<?php echo site_url(); ?>/adi/monitoringketinggian/system_log/" class="nav-link ">
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/system_log/" class="nav-link ">
                                             <i class="icon-graph"></i>
                                             <span class="title">Today System Log</span>
                                         </a>
