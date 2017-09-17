@@ -21,7 +21,6 @@
                                     <div id="gg1"></div>
                                     <center>
                                         <div id="nilai" style="font-size:36px"></div>
-                                        <button onClick="stopSound();">Stop</button>
                                     </center>
                                 </div>
                                 <div class="col-lg-3"></div>
@@ -58,7 +57,6 @@
                                     gg1.refresh(response.dataset.last_data[0].ketinggian);  
                                     $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm") ;
                                     if(response.dataset.last_data[0].ketinggian > 60 ){
-                                         // buffers automatically when created
                                         snd.play();
                                     }     
                             }
@@ -74,19 +72,6 @@
                             return 'Rendah';
                         }
                     }
-
-                    function stopSound(){
-                        snd.stop();
-                    }
-
-                    
-
                     setInterval(function(){refresh_data();},1000);
-                    
-                    
-                        
-
-
-                    
                 </script>
             

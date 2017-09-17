@@ -22,8 +22,8 @@ class Api extends CI_Controller {
 			$this->mod_device->simpan_data_ketinggian_air($data_ketinggian);
 			echo "#Success^";
 		}else{
-		// 	echo "#Anda tidak diperkenankan mengakses URL ini. Terima kasih^";		
-		// }
+			echo "#Anda tidak diperkenankan mengakses URL ini. Terima kasih^";		
+		}
 	}
 
 	public function dataset(){

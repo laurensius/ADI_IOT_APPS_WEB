@@ -37,7 +37,7 @@
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <!--<img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />-->
+                                    <img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />
                                     <span class="username username-hide-on-mobile"><?php echo $this->session->userdata("session_aalsystem_nama_lengkap"); ?></span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
