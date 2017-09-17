@@ -76,30 +76,36 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item start">
-                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/index/" class="nav-link ">
-                                            <i class="icon-clone"></i>
-                                            <span class="title">Monitoring Sensor</span>
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/" class="nav-link ">
+                                            <i class="icon-bar-chart"></i>
+                                            <span class="title">Dam Monitoring</span>
                                         </a>
                                     </li>
                                     <li class="nav-item start ">
-                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/system_log/" class="nav-link ">
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/today_log/" class="nav-link ">
                                             <i class="icon-graph"></i>
-                                            <span class="title">Today System Log</span>
+                                            <span class="title">Today Log</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
 							<li class="nav-item start">
                                 <a href="#" class="nav-link nav-toggle">
-                                    <i class="icon-home"></i>
-                                    <span class="title">Laporan</span>
+                                    <i class="icon-layers"></i>
+                                    <span class="title">Report</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item start">
-                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/system_laporan/" class="nav-link ">
-                                            <i class="icon-bar-chart"></i>
-                                            <span class="title">Cek Laporan Periode</span>
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/morning_report/" class="nav-link ">
+                                            <i class="icon-clock"></i>
+                                            <span class="title">Morning Report (daily)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item start">
+                                        <a href="<?php echo site_url(); ?>/monitoringketinggian/custom_report/" class="nav-link ">
+                                            <i class="icon-clock"></i>
+                                            <span class="title">Periodical Report</span>
                                         </a>
                                     </li>
                                 </ul>

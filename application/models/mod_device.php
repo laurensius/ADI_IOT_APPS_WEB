@@ -12,6 +12,12 @@ class Mod_device extends CI_Model{
         $query = $this->db->query("Select * from t_ketinggian_air order by id desc limit 5");
         return $query->result();
     }
+
+	function today_log(){
+        $query = $this->db->query("Select * from t_ketinggian_air where datetime like '". date("Y-m-d") ."%' order by id desc");
+        return $query->result();
+    }
+
     
     
 }

@@ -32,7 +32,7 @@ class MonitoringKetinggian extends CI_Controller {
 
 
 
-    public function system_log(){
+    public function today_log(){
         if($this->session->userdata("session_adisystem_code")){
             $this->load->view("adi/header");
             $this->load->view("adi/body_log");

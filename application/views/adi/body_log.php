@@ -7,18 +7,18 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>System Log</span>
+                                    <span>Today Log</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> System Log Ketinggian Air
+                        <h1 class="page-title"> Today Log
                         </h1>
                         <div class="container-fluid">
 						<div id="p1">
                             <center>
                                 <strong>
-                                    <h4>Tabel Log Kondisi Level Air</h4>
-									<h4>Dalam Periode</h4></br>
+                                    <h4>Tabel Log Kondisi Ketinggian Air</h4>
+									<h4>Pada hari ini <?php echo date("d-m-Y")?></h4></br>
                                 </strong>
                             </center>
                             <br>
@@ -28,6 +28,8 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Waktu</th>
+                                        <th>Ketinggian</th>
+                                        <th>Volume</th>
                                         <th>Status Ketinggian</th>
                                     </tr>
                                 </thead>
@@ -35,7 +37,7 @@
                                 </tbody>
                             </table>
 							</div>
-							<button class="btn btn-success" onclick="printContent('p1')"><i class="fa  fa-print">Print</i></button>
+							<button class="btn btn-success" onclick="printContent('p1')"><i class="fa fa-print">Print</i></button>
                         </div>
                     </div>
                 </div>
@@ -44,7 +46,7 @@
                     function refresh_data(){
                         var str_tabel = '';
                         $.ajax({
-                            url : "<?php echo site_url(); ?>/adi/api/dataset/",
+                            url : "<?php echo site_url(); ?>/api/dataset/",
                             type : "GET",
                             dataType : "json",
                             success : function(response){
@@ -61,6 +63,8 @@
                                         str_tabel += '<tr>';
                                         str_tabel += '<td>' + ctr + '</td>';
                                         str_tabel += '<td>' + response.dataset.today_log[i].datetime + '</td>';
+                                        str_tabel += '<td>' + response.dataset.today_log[i].ketinggian + '</td>';
+                                        str_tabel += '<td>' + response.dataset.today_log[i].volume + '</td>';
                                         str_tabel += '<td><span class="'+severity+'">' + response.dataset.today_log[i].status + '</span></td>';
                                         str_tabel += '</tr>';
                                         ctr++;
@@ -78,12 +82,12 @@
 					 
                 </script>
 				<script>
-				  function printContent(el){
-        var restorepage = document.body.innerHTML;
-        var printcontent = document.getElementById(el).innerHTML;
-        document.body.innerHTML = printcontent;
-        window.print();
-        document.body.innerHTML = restorepage;
-    }
+				function printContent(el){
+                    var restorepage = document.body.innerHTML;
+                    var printcontent = document.getElementById(el).innerHTML;
+                    document.body.innerHTML = printcontent;
+                    window.print();
+                    document.body.innerHTML = restorepage;
+                }
 				</script>
             

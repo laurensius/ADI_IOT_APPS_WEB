@@ -7,12 +7,12 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>Sensor Ultrasonik</span>
+                                    <span>Dam Monitoring</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Monitoring Ketinggian Air 
-                            <small>Bendungan Waduk Darma</small>
+                        <h1 class="page-title"> Dam Monitoring 
+                            <small></small>
                         </h1>
                         <div class="container-fluid">
                             <div class="row">
@@ -20,7 +20,7 @@
                                 <div class="col-lg-6">
                                     <div id="gg1"></div>
                                     <center>
-                                        <div id="nilai" style="font-size:36px"></div>
+                                        <div id="nilai" style="font-size:24px">0</div>
                                     </center>
                                 </div>
                                 <div class="col-lg-3"></div>
@@ -42,8 +42,11 @@
                             max: 70,
                             title: "Ketinggian Air ",
                             label: "Status",
+                            donut: false,
                             relativeGaugeSize : true,
-                            textRenderer: customValue
+                            textRenderer: customValue,
+                            gaugeWidthScale: 0.2
+
                         });
 
                     function refresh_data(){
@@ -55,7 +58,7 @@
                               async : true,
                               success : function(response){
                                     gg1.refresh(response.dataset.last_data[0].ketinggian);  
-                                    $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm") ;
+                                    $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan") ;
                                     if(response.dataset.last_data[0].ketinggian > 60 ){
                                         snd.play();
                                     }     
