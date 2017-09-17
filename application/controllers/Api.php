@@ -17,10 +17,11 @@ class Api extends CI_Controller {
 				"id" => "",
 				"datetime" => date("Y-m-d H:i:s"),
 				"ketinggian" => $this->uri->segment(3),
+				"volume" => number_format((float)3.14 * (9 * 9) * $this->uri->segment(3), 2, '.', ''),
 				"status" => $this->uri->segment(4)
 				);
 			$this->mod_device->simpan_data_ketinggian_air($data_ketinggian);
-			echo "#Success^";
+			echo "#Success^".$data_ketinggian["volume"];
 		}else{
 			echo "#Anda tidak diperkenankan mengakses URL ini. Terima kasih^";		
 		}

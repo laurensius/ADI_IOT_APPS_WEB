@@ -11,33 +11,30 @@
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Today Log
-                        </h1>
+                        <h1 class="page-title"> Today Log <button class="btn btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Today Log </i></button> </h1>
                         <div class="container-fluid">
-						<div id="p1">
-                            <center>
-                                <strong>
-                                    <h4>Tabel Log Kondisi Ketinggian Air</h4>
-									<h4>Pada hari ini <?php echo date("d-m-Y")?></h4></br>
-                                </strong>
-                            </center>
-                            <br>
-							
-                            <table class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Waktu</th>
-                                        <th>Ketinggian</th>
-                                        <th>Volume</th>
-                                        <th>Status Ketinggian</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="body_log">
-                                </tbody>
-                            </table>
-							</div>
-							<button class="btn btn-success" onclick="printContent('p1')"><i class="fa fa-print">Print</i></button>
+    						<div id="p1">
+                                <center>
+                                    <strong>
+                                        <h4>Tabel Log Kondisi Ketinggian Air</h4>
+    									<h4>Pada hari ini <?php echo date("d-m-Y")?></h4></br>
+                                    </strong>
+                                </center>
+                                <br>
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Waktu</th>
+                                            <th>Ketinggian</th>
+                                            <th>Volume</th>
+                                            <th>Status Ketinggian</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="body_log">
+                                    </tbody>
+                                </table>
+    						</div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +84,8 @@
                     var printcontent = document.getElementById(el).innerHTML;
                     document.body.innerHTML = printcontent;
                     window.print();
-                    document.body.innerHTML = restorepage;
+                    // document.body.innerHTML = restorepage;
+                    window.location = '<?php echo site_url(); ?>/monitoringketinggian/today_log/';
                 }
 				</script>
             
