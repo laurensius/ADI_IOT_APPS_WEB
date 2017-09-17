@@ -7,11 +7,11 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>Today Log</span>
+                                    <span>Today Measurement Log</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Today Log <button class="btn btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Today Log </i></button> </h1>
+                        <h1 class="page-title"> Today Measurement Log <button class="btn btn-xs btn-success" onclick="printContent('p1')"><i class="fa fa-print"> Print Today Measurement Log </i></button> </h1>
                         <div class="container-fluid">
     						<div id="p1">
                                 <center>
@@ -51,12 +51,15 @@
                                     var ctr = 1;
 									var severity = "";
                                     for(var i=0;i<response.dataset.today_log.length;i++){
-										if(response.dataset.today_log[i].status === "rendah"){
+										if(response.dataset.today_log[i].status == "rendah"){
 											severity = "badge badge-warning";
 										}else
-										if(response.dataset.today_log[i].status === "tinggi"){
+										if(response.dataset.today_log[i].status == "tinggi"){
 											severity = "badge badge-danger";
-										}
+										}else
+                                        if(response.dataset.today_log[i].status == "normal"){
+                                            severity = "badge badge-success";
+                                        }
                                         str_tabel += '<tr>';
                                         str_tabel += '<td>' + ctr + '</td>';
                                         str_tabel += '<td>' + response.dataset.today_log[i].datetime + '</td>';

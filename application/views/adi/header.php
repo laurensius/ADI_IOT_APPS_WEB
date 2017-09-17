@@ -21,14 +21,13 @@
         
         <link rel="shortcut icon" href="favicon.ico" /> 
     </head>
-                 <!-- page-header-fixed page-sidebar-closed-hide-logo page-content-white page-sidebar-closed -->
     <body class="page-header-fixed page-sidebar-closed page-sidebar-closed-hide-logo page-content-white page-md">
         <div class="page-wrapper">
-            <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header navbar ">
                 <div class="page-header-inner ">
                     <div class="page-logo">
                         <a href="index.html">
-                            <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" /> 
+                            <img src="<?php echo base_url();?>assets/img/dam_logo.png" alt="logo" class="logo-default" /> 
                         </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
@@ -37,19 +36,15 @@
                     <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
                         <span></span>
                     </a>
-                    <div class="top-menu top-menu-fixed page-header-fixed">
+                    <div class="top-menu ">
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown dropdown-user">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">
+                                    <!-- <img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" /> -->
                                     <span class="username username-hide-on-mobile"><?php echo $this->session->userdata("session_adisystem_nama_lengkap"); ?></span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
-                                    <!--li>
-                                        <a href="page_user_profile_1.html">
-                                            <i class="icon-user"></i> My Profile </a>
-                                    </li-->
                                     <li class="divider"> </li>
                                     <li>
                                         <a href="<?php echo site_url();?>/monitoringketinggian/logout/">
@@ -63,7 +58,6 @@
                 </div>
             </div>
             <div class="clearfix"> </div>
-            <div class="page-container">
                 <div class="page-sidebar-wrapper">
                     <div class="page-sidebar navbar-collapse collapse">
                         <ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
@@ -88,7 +82,7 @@
                                     <li class="nav-item start ">
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/today_log/" class="nav-link ">
                                             <i class="icon-graph"></i>
-                                            <span class="title">Today Log</span>
+                                            <span class="title">Today Measurement Log</span>
                                         </a>
                                     </li>
                                 </ul>

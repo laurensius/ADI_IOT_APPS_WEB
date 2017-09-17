@@ -21,10 +21,29 @@ class Api extends CI_Controller {
 				"status" => $this->uri->segment(4)
 				);
 			$this->mod_device->simpan_data_ketinggian_air($data_ketinggian);
-			echo "#Success^".$data_ketinggian["volume"];
+			$data_report = array(
+				"id" => "",
+				"date" => date("Y-m-d"),
+				"ketinggian" => $this->uri->segment(3),
+				"volume" => number_format((float)3.14 * (9 * 9) * $this->uri->segment(3), 2, '.', ''),
+				"status" => $this->uri->segment(4)
+				);
+			$chk = $this->morning_report_checker();
+			$jam = date("H");
+			if($chk < 1 && $jam >= 8){
+				$this->mod_device->simpan_morning_report($data_report);
+			}
+			echo "#Success^";
 		}else{
 			echo "#Anda tidak diperkenankan mengakses URL ini. Terima kasih^";		
 		}
+	}
+
+	public function morning_report_checker(){
+		$jumlah = $this->mod_device->morning_report_checker();
+		foreach ($jumlah as $jml) 
+		$return = $jml->jumlah;
+		return $return;
 	}
 
 	public function dataset(){
@@ -35,6 +54,14 @@ class Api extends CI_Controller {
 			);
 		header('Content-Type: application/json');
 		echo json_encode(array("dataset"=>$dataset));
+	}
+
+	public function custom_morning_report(){
+		$dataset = array(
+			"custom_morning_report" => $this->mod_device->custom_morning_report($this->uri->segment(3),$this->uri->segment(4))
+			);
+		header('Content-Type: application/json');
+		echo json_encode(array("report"=>$dataset));
 	}
 	
 }

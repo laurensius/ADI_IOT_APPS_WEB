@@ -12,6 +12,7 @@
                             </ul>
                         </div>
                         <h1 class="page-title"> Morning Report (daily) 
+                             <button class="btn btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
                         </h1>
                         <div class="container-fluid">
                             <div class="row">
@@ -44,7 +45,7 @@
                                     <center>
                                         <strong>
                                             <h4>Laporan Harian Stasiun Pemantauan Waduk Darma</h4>
-                                            <h4>Bulan data : <?php echo date("F Y")?></h4>
+                                            <h4>Bulan data : <span id="bulan_data"></span></h4>
                                             <h6>(Pemantauan Pukul 8 Pagi)</h6>
                                         </strong>
                                     </center>
@@ -67,58 +68,16 @@
                         </div>
                     </div>
                 </div>
-				
                 <script type="text/javascript">
-                    function refresh_data(){
-                        var str_tabel = '';
-                        $.ajax({
-                            url : "<?php echo site_url(); ?>/api/dataset/",
-                            type : "GET",
-                            dataType : "json",
-                            success : function(response){
-                                if(response.dataset.morning_report_current_month.length > 0){
-                                    var ctr = 1;
-									var severity = "";
-                                    for(var i=0;i<response.dataset.morning_report_current_month.length;i++){
-										if(response.dataset.morning_report_current_month[i].status == "Rendah"){
-											severity = "badge badge-warning";
-										}else
-										if(response.dataset.morning_report_current_month[i].status == "Tinggi"){
-											severity = "badge badge-danger";
-										}else
-                                        if(response.dataset.morning_report_current_month[i].status == "Normal"){
-                                            severity = "badge badge-success";
-                                        }
-                                        str_tabel += '<tr>';
-                                        str_tabel += '<td>' + ctr + '</td>';
-                                        str_tabel += '<td>' + response.dataset.morning_report_current_month[i].date + '</td>';
-                                        str_tabel += '<td>' + parseFloat(response.dataset.morning_report_current_month[i].ketinggian).toFixed(2) + '</td>';
-                                        str_tabel += '<td>' + parseFloat(response.dataset.morning_report_current_month[i].volume).toFixed(2) + '</td>';
-                                        str_tabel += '<td><span class="'+severity+'">' + response.dataset.morning_report_current_month[i].status + '</span></td>';
-                                        str_tabel += '</tr>';
-                                        ctr++;
-                                    }
-                                }else{
-                                    str_tabel += '<tr>';
-                                    str_tabel += '<td colspan="5">Tidak ada log tersimpan hari ini.</td>';
-                                    str_tabel += '</tr>';
-                                }
-                                $("#body_log").html(str_tabel);
-                            }
-                        });
-                    }
-                    setInterval(function(){refresh_data();},1000);
-					 
-                </script>
-				<script>
 				function printContent(el){
                     var restorepage = document.body.innerHTML;
                     var printcontent = document.getElementById(el).innerHTML;
                     document.body.innerHTML = printcontent;
                     window.print();
                     // document.body.innerHTML = restorepage;
-                    window.location = '<?php echo site_url(); ?>/monitoringketinggian/morning_report_current_month/';
+                    window.location = '<?php echo site_url(); ?>/monitoringketinggian/morning_report';
                 }
+                
                 function filterLaporan(){
                     var batas_bawah = document.getElementById('batas_bawah').value;
                     var batas_atas = document.getElementById('batas_atas').value;
@@ -126,12 +85,53 @@
                         if(batas_bawah > batas_atas){
                             alert("Perhatian : Bulan akhir harus lebih besar atau sama dengan bulan awal. Terima kasih.");
                         }else{
-                            alert("nice");
+                            load_report(batas_bawah,batas_atas);
                         }    
                     }else{
                         alert("Perhatian : Bulan akhir dan bulan awal harus diisi. Terima kasih.");
                     }    
                 }
+
+                function load_report(bb,ba){
+                    var str_tabel = '';
+                    $.ajax({
+                        url : "<?php echo site_url(); ?>/api/custom_morning_report/" + bb + "/" + ba + "/",
+                        type : "GET",
+                        dataType : "json",
+                        success : function(response){
+                            if(response.report.custom_morning_report.length > 0){
+                                $("#bulan_data").html(bb + " sampai dengan " + ba);
+                                var ctr = 1;
+                                var severity = "";
+                                for(var i=0;i<response.report.custom_morning_report.length;i++){
+                                    if(response.report.custom_morning_report[i].status == "Rendah"){
+                                        severity = "badge badge-warning";
+                                    }else
+                                    if(response.report.custom_morning_report[i].status == "Tinggi"){
+                                        severity = "badge badge-danger";
+                                    }else
+                                    if(response.report.custom_morning_report[i].status == "Normal"){
+                                        severity = "badge badge-success";
+                                    }
+                                    str_tabel += '<tr>';
+                                    str_tabel += '<td>' + ctr + '</td>';
+                                    str_tabel += '<td>' + response.report.custom_morning_report[i].date + '</td>';
+                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].ketinggian).toFixed(2) + '</td>';
+                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].volume).toFixed(2) + '</td>';
+                                    str_tabel += '<td><span class="'+severity+'">' + response.report.custom_morning_report[i].status + '</span></td>';
+                                    str_tabel += '</tr>';
+                                    ctr++;
+                                }
+                            }else{
+                                str_tabel += '<tr>';
+                                str_tabel += '<td colspan="5">Tidak ada laporan tersimpan untuk periode ini.</td>';
+                                str_tabel += '</tr>';
+                            }
+                            $("#body_log").html(str_tabel);
+                        }
+                    });
+                }
+
                 
 				</script>
             
