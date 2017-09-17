@@ -48,7 +48,7 @@
                                     </li>
                                     <li class="divider"> </li>
                                     <li>
-                                        <a href="<?php echo site_url();?>/adi/monitoringketingian/logout/">
+                                        <a href="<?php echo site_url();?>/monitoringketingian/logout/">
                                             <i class="icon-key"></i> Log Out 
                                         </a>
                                     </li>
