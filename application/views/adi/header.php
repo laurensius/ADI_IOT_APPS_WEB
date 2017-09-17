@@ -7,7 +7,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Automation System " name="description" />
         <meta content="Laurensius Dede Suhardiman" name="author" />
-        <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />-->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -15,17 +15,21 @@
         <link href="<?php echo base_url();?>assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="<?php echo base_url();?>assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="<?php echo base_url();?>assets/layouts/layout/css/themes/dark.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo base_url();?>assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
        <script src="<?php echo base_url();?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         
         <link rel="shortcut icon" href="favicon.ico" /> 
     </head>
-    <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+                 <!-- page-header-fixed page-sidebar-closed-hide-logo page-content-white page-sidebar-closed -->
+    <body class="page-header-fixed page-sidebar-closed page-sidebar-closed-hide-logo page-content-white page-md">
         <div class="page-wrapper">
             <div class="page-header navbar navbar-fixed-top">
                 <div class="page-header-inner ">
                     <div class="page-logo">
+                        <a href="index.html">
+                            <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" /> 
+                        </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
                         </div>
@@ -33,11 +37,11 @@
                     <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
                         <span></span>
                     </a>
-                    <div class="top-menu">
+                    <div class="top-menu top-menu-fixed page-header-fixed">
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <!--<img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />-->
+                                    <img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />
                                     <span class="username username-hide-on-mobile"><?php echo $this->session->userdata("session_adisystem_nama_lengkap"); ?></span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
@@ -62,7 +66,7 @@
             <div class="page-container">
                 <div class="page-sidebar-wrapper">
                     <div class="page-sidebar navbar-collapse collapse">
-                        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                        <ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
                             <li class="sidebar-toggler-wrapper hide">
                                 <div class="sidebar-toggler">
                                     <span></span>

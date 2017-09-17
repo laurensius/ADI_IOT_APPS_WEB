@@ -18,6 +18,12 @@ class Mod_device extends CI_Model{
         return $query->result();
     }
 
+    function morning_report_current_month(){
+        $query = $this->db->query("Select * from t_morning_report where date like '". date("Y-m") ."%' order by id asc");
+        return $query->result();
+    }
+
+
     
     
 }

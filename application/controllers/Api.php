@@ -30,7 +30,8 @@ class Api extends CI_Controller {
 	public function dataset(){
 		$dataset = array(
 			"last_data" => $this->mod_device->last_data(),
-			"today_log" => $this->mod_device->today_log()
+			"today_log" => $this->mod_device->today_log(),
+			"morning_report_current_month" => $this->mod_device->morning_report_current_month()
 			);
 		header('Content-Type: application/json');
 		echo json_encode(array("dataset"=>$dataset));

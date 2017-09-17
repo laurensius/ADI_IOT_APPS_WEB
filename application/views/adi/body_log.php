@@ -60,8 +60,8 @@
                                         str_tabel += '<tr>';
                                         str_tabel += '<td>' + ctr + '</td>';
                                         str_tabel += '<td>' + response.dataset.today_log[i].datetime + '</td>';
-                                        str_tabel += '<td>' + response.dataset.today_log[i].ketinggian + '</td>';
-                                        str_tabel += '<td>' + response.dataset.today_log[i].volume + '</td>';
+                                        str_tabel += '<td>' + parseFloat(response.dataset.today_log[i].ketinggian).toFixed(2) + '</td>';
+                                        str_tabel += '<td>' + parseFloat(response.dataset.today_log[i].volume).toFixed(2) + '</td>';
                                         str_tabel += '<td><span class="'+severity+'">' + response.dataset.today_log[i].status + '</span></td>';
                                         str_tabel += '</tr>';
                                         ctr++;

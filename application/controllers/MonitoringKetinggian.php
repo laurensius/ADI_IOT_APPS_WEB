@@ -30,12 +30,20 @@ class MonitoringKetinggian extends CI_Controller {
         }
     }
 
-
-
     public function today_log(){
         if($this->session->userdata("session_adisystem_code")){
             $this->load->view("adi/header");
             $this->load->view("adi/body_log");
+            $this->load->view("adi/footer");
+        }else{
+            $this->load->view("adi/login");
+        }
+    }
+
+    public function morning_report(){
+        if($this->session->userdata("session_adisystem_code")){
+            $this->load->view("adi/header");
+            $this->load->view("adi/body_morning_report");
             $this->load->view("adi/footer");
         }else{
             $this->load->view("adi/login");

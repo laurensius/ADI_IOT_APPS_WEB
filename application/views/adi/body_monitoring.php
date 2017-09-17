@@ -39,7 +39,7 @@
                             id: "gg1",
                             value: 0,
                             min: 0,
-                            max: 70,
+                            max: 20,
                             title: "Ketinggian Air ",
                             label: "Status",
                             donut: false,
