@@ -37,18 +37,18 @@
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />
-                                    <span class="username username-hide-on-mobile"><?php echo $this->session->userdata("session_aalsystem_nama_lengkap"); ?></span>
+                                    <!--<img alt="" class="img-circle" src="<?php echo base_url();?>assets/layouts/layout/img/avatar3_small.jpg" />-->
+                                    <span class="username username-hide-on-mobile"><?php echo $this->session->userdata("session_adisystem_nama_lengkap"); ?></span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
-                                    <li>
+                                    <!--li>
                                         <a href="page_user_profile_1.html">
                                             <i class="icon-user"></i> My Profile </a>
-                                    </li>
+                                    </li-->
                                     <li class="divider"> </li>
                                     <li>
-                                        <a href="<?php echo site_url();?>/monitoringketingian/logout/">
+                                        <a href="<?php echo site_url();?>/monitoringketinggian/logout/">
                                             <i class="icon-key"></i> Log Out 
                                         </a>
                                     </li>
