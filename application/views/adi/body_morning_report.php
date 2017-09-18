@@ -12,7 +12,7 @@
                             </ul>
                         </div>
                         <h1 class="page-title"> Morning Report (daily) 
-                             <button class="btn btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
+                             <button class="btn btn-primary btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
                         </h1>
                         <div class="container-fluid">
                             <div class="row">
