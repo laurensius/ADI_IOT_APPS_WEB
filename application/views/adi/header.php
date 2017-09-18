@@ -100,12 +100,12 @@
                                             <span class="title">Morning Report (daily)</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item start">
+                                    <!-- <li class="nav-item start">
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/custom_report/" class="nav-link ">
                                             <i class="icon-clock"></i>
                                             <span class="title">Periodical Report</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
                         </ul>
