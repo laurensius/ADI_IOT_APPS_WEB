@@ -17,7 +17,7 @@
                                 <center>
                                     <strong>
                                         <h4>Tabel Log Kondisi Ketinggian Air</h4>
-    									<h4>Pada hari ini <?php echo date("d-m-Y")?></h4></br>
+    									<h4>Pada hari ini <?php echo date("d F Y")?></h4></br>
                                     </strong>
                                 </center>
                                 <br>

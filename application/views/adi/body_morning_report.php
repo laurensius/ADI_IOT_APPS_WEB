@@ -12,7 +12,7 @@
                             </ul>
                         </div>
                         <h1 class="page-title"> Morning Report (daily) 
-                             <button class="btn btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
+                             <button class="btn btn-primary btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
                         </h1>
                         <div class="container-fluid">
                             <div class="row">
@@ -116,8 +116,8 @@
                                     str_tabel += '<tr>';
                                     str_tabel += '<td>' + ctr + '</td>';
                                     str_tabel += '<td>' + response.report.custom_morning_report[i].date + '</td>';
-                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].ketinggian).toFixed(2) + '</td>';
-                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].volume).toFixed(2) + '</td>';
+                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].ketinggian).toFixed(2) + ' cm dari dasar</td>';
+                                    str_tabel += '<td>' + parseFloat(response.report.custom_morning_report[i].volume).toFixed(2) + ' cm<sup>3</sup></td>';
                                     str_tabel += '<td><span class="'+severity+'">' + response.report.custom_morning_report[i].status + '</span></td>';
                                     str_tabel += '</tr>';
                                     ctr++;
