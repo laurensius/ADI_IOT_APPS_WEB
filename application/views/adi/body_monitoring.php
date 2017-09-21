@@ -19,11 +19,13 @@
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
                                     <div id="gg1"></div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-12">
                                     <center>
                                         <div id="nilai" style="font-size:24px">0</div>
                                     </center>
                                 </div>
-                                <div class="col-lg-3"></div>
                             </div>
                         </div>
                     </div>
