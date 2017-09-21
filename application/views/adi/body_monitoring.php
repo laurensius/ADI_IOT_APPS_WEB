@@ -61,7 +61,8 @@
                               success : function(response){
                                     gg1.refresh(response.dataset.last_data[0].ketinggian);
                                     $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan dengan volume " + parseFloat(response.dataset.last_data[0].volume,2) + " cm<sup>3</sup>") ;
-                                    if(response.dataset.last_data[0].ketinggian > 15 ){
+                                    if((response.dataset.last_data[0].ketinggian > 15 && response.dataset.last_data[0].notif == 1) ||
+                                      (response.dataset.last_data[0].ketinggian > 5 && response.dataset.last_data[0].notif == 3)) {
                                         snd.play();
                                     }     
                             }
