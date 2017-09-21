@@ -19,11 +19,13 @@
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
                                     <div id="gg1"></div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-12">
                                     <center>
                                         <div id="nilai" style="font-size:24px">0</div>
                                     </center>
                                 </div>
-                                <div class="col-lg-3"></div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +61,7 @@
                               success : function(response){
                                     gg1.refresh(response.dataset.last_data[0].ketinggian);  
                                     $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan dengan volume " + parseFloat(response.dataset.last_data[0].volume,2) + " cm<sup>3</sup>") ;
-                                    if(response.dataset.last_data[0].ketinggian > 60 ){
+                                    if(response.dataset.last_data[0].ketinggian > 15 ){
                                         snd.play();
                                     }     
                             }
