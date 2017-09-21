@@ -69,11 +69,11 @@
                     }
 
                     function customValue(val) {
-                        if (val >= 15) {
+                        if (val > 15) {
                             return 'Tinggi';
-                        } else if (val > 5 && val < 15) {
+                        } else if (val >= 5 && val <= 15) {
                             return 'Normal';
-                        } else if (val <= 5) {
+                        } else if (val < 5) {
                             return 'Rendah';
                         }
                     }
