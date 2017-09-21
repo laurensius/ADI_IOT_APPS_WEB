@@ -12,7 +12,7 @@ class Api extends CI_Controller {
 	}
 
 	public function post_data(){
-		if($this->uri->segment(3)!=null && $this->uri->segment(4)!=null){
+		if($this->uri->segment(3)!=null && $this->uri->segment(4)!=null && $this->uri->segment(5)!=null){
 			$data_ketinggian = array(
 				"id" => "",
 				"datetime" => date("Y-m-d H:i:s"),
