@@ -1,9 +1,5 @@
             </div>
             <div class="page-footer">
-                <div class="page-footer-inner"> 
-                    <?php echo date("Y") ?> &copy; 863 Studio By
-                    <a target="_blank" href="http://laurensius-dede-suhardiman.com">Laurensius Dede Suhardiman</a> 
-                </div>
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

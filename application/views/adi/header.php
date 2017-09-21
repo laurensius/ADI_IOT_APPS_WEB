@@ -82,7 +82,7 @@
                                     <li class="nav-item start ">
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/today_log/" class="nav-link ">
                                             <i class="icon-graph"></i>
-                                            <span class="title">Today Measurement Log</span>
+                                            <span class="title">Log Pengukuran Harian</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -90,14 +90,14 @@
 							<li class="nav-item start">
                                 <a href="#" class="nav-link nav-toggle">
                                     <i class="icon-layers"></i>
-                                    <span class="title">Report</span>
+                                    <span class="title">Laporan</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item start">
                                         <a href="<?php echo site_url(); ?>/monitoringketinggian/morning_report/" class="nav-link ">
                                             <i class="icon-clock"></i>
-                                            <span class="title">Morning Report (daily)</span>
+                                            <span class="title">Laporan Pagi (periode)</span>
                                         </a>
                                     </li>
                                     <!-- <li class="nav-item start">

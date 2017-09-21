@@ -59,7 +59,7 @@
                               success : function(response){
                                     gg1.refresh(response.dataset.last_data[0].ketinggian);  
                                     $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan") ;
-                                    if(response.dataset.last_data[0].ketinggian > 60 ){
+                                    if(response.dataset.last_data[0].ketinggian > 17 ){
                                         snd.play();
                                     }     
                             }
@@ -67,9 +67,9 @@
                     }
 
                     function customValue(val) {
-                        if (val >= 15) {
+                        if (val >= 17) {
                             return 'Tinggi';
-                        } else if (val > 5 && val < 15) {
+                        } else if (val > 5 && val < 17) {
                             return 'Normal';
                         } else if (val <= 5) {
                             return 'Rendah';

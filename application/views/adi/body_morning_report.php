@@ -3,15 +3,15 @@
                         <div class="page-bar" style="background-color:#E1E5EC">
                             <ul class="page-breadcrumb">
                                 <li>
-                                    <span>Report</span>
+                                    <span>Laporan</span>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>Morning Report</span>
+                                    <span>Laporan Pagi</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Morning Report (daily) 
+                        <h1 class="page-title"> Laporan Pagi (periode) 
                              <button class="btn btn-primary btn-xs" onclick="printContent('p1')"><i class="fa fa-print"> Print Morning Report </i></button>
                         </h1>
                         <div class="container-fluid">
@@ -44,9 +44,9 @@
                                 <div id="p1">
                                     <center>
                                         <strong>
-                                            <h4>Laporan Harian Stasiun Pemantauan Waduk Darma</h4>
+                                            <h4>Laporan Bulanan dalam Pengukuran Harian<h4>
                                             <h4>Bulan data : <span id="bulan_data"></span></h4>
-                                            <h6>(Pemantauan Pukul 8 Pagi)</h6>
+                                            <h6>(Pengukuran Pukul 8 Pagi)</h6>
                                         </strong>
                                     </center>
                                     <br>

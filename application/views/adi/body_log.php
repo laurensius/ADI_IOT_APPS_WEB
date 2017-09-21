@@ -7,11 +7,11 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>Today Measurement Log</span>
+                                    <span>Log Pengukuran Harian</span>
                                 </li>
                             </ul>
                         </div>
-                        <h1 class="page-title"> Today Measurement Log <button class="btn btn-xs btn-success" onclick="printContent('p1')"><i class="fa fa-print"> Print Today Measurement Log </i></button> </h1>
+                        <h1 class="page-title"> Log Pengukuran Harian <button class="btn btn-xs btn-success" onclick="printContent('p1')"><i class="fa fa-print"> Print Today Measurement Log </i></button> </h1>
                         <div class="container-fluid">
     						<div id="p1">
                                 <center>
