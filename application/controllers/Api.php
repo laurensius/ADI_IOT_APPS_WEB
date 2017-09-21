@@ -18,7 +18,8 @@ class Api extends CI_Controller {
 				"datetime" => date("Y-m-d H:i:s"),
 				"ketinggian" => $this->uri->segment(3),
 				"volume" => number_format((float)3.14 * (9 * 9) * $this->uri->segment(3), 2, '.', ''),
-				"status" => $this->uri->segment(4)
+				"status" => $this->uri->segment(4),
+				"notif" => $this->uri->segment(5)
 				);
 			$this->mod_device->simpan_data_ketinggian_air($data_ketinggian);
 			$data_report = array(
