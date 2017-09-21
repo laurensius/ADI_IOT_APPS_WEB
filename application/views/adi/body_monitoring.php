@@ -57,14 +57,9 @@
                               dataType : "json",
                               async : true,
                               success : function(response){
-                                    gg1.refresh(response.dataset.last_data[0].ketinggian);  
-<<<<<<< HEAD
-                                    $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan") ;
-                                    if(response.dataset.last_data[0].ketinggian > 17 ){
-=======
+                                    gg1.refresh(response.dataset.last_data[0].ketinggian);
                                     $("#nilai").html(parseFloat(response.dataset.last_data[0].ketinggian,2) + " cm dari dasar bendungan dengan volume " + parseFloat(response.dataset.last_data[0].volume,2) + " cm<sup>3</sup>") ;
-                                    if(response.dataset.last_data[0].ketinggian > 60 ){
->>>>>>> e6da6028242cbe04a87bc4a5e87bc411f0ac52fc
+                                    if(response.dataset.last_data[0].ketinggian > 15 ){
                                         snd.play();
                                     }     
                             }
@@ -72,9 +67,9 @@
                     }
 
                     function customValue(val) {
-                        if (val >= 17) {
+                        if (val >= 15) {
                             return 'Tinggi';
-                        } else if (val > 5 && val < 17) {
+                        } else if (val > 5 && val < 15) {
                             return 'Normal';
                         } else if (val <= 5) {
                             return 'Rendah';
